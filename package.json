@@ -1,0 +1,22 @@
+{
+  "name": "bijou.js.org",
+  "version": "1.0.0",
+  "description": "Bijou site",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bijou-js/bijou.js.org.git"
+  },
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json",
+  },
+  "author": "Bijou.js contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bijou-js/bijou.js.org/issues"
+  },
+  "homepage": "https://bijou.js.org",
+  "devDependencies": {
+    "clean-jsdoc-theme": "3.0.7",
+    "jsdoc": "~3.6.6",
+  }
+}
