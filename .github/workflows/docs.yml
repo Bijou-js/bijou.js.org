@@ -7,6 +7,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Checkout Bijou
+        uses: actions/checkout@v2
+        with:
+          repository: Bijou-js/bijou.js
+          path: bijou
+          ref: main
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
       - run: sudo npm install --save 
