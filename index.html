@@ -505,14 +505,11 @@
       }, randomTime);
     });
   }
-  function generateHTML() {
+  function generateHTML(md) {
     var output = '';
+    showdown.setFlavor('github');
     var converter = new showdown.Converter();
-    _$.each(Object.keys(_$), (key) => {
-      output += `"<details><summary>${_$.info(
-        key,
-      )}</summary>${converter.makeHtml(_$.info(key))}"</details>`;
-    });
+    output = converter.makeHtml(md);
     return output;
   }
 </script>
