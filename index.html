@@ -18,6 +18,12 @@
       href="https://cdn.jsdelivr.net/npm/bijou.js@latest/bijou-min.js"
       as="script"
     /> -->
+	      <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+
 	  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
     <!-- Import iconify (For buttons) -->
 	  
@@ -144,7 +150,13 @@
     text-align: center;
     display: block;
   }
-
+  #readme > ul:first-of-type::before {
+    content: 'Table of contents';
+    font-size: 24px;
+    text-align: center;
+    width: max-content;
+    padding: 0;
+  }
   /* Gradient <hr>'s */
   hr {
     display: block;
@@ -403,6 +415,10 @@
         _$.each(html.querySelectorAll('img'), (br) => br.remove());
         document.getElementById('readme').innerHTML +=
           html.documentElement.innerHTML;
+	  document.querySelectorAll('pre code').forEach((block) => {
+    		hljs.highlightBlock(block);
+  	});
+
       });
     document.body.innerHTML += `
 	<svg style="display: none;">
