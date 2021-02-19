@@ -1,4 +1,5 @@
-on: push
+on: 
+ workflow_dispatch:
 name: Generate docs
 jobs:
  git-bat:
