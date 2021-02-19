@@ -393,10 +393,10 @@
     }
   };
   function init() {
-    fetch('README.html')
+    fetch('https://raw.githubusercontent.com/Bijou-js/Bijou.js/main/README.md')
       .then((res) => res.text())
       .then((text) => {
-        let html = _$.parseHTML(text);
+        let html = _$.parseHTML(generateHTML(text));
         html.querySelector('img').remove();
         _$.each(html.querySelectorAll('br'), (br) => br.remove());
         _$.each(html.querySelectorAll('img'), (br) => br.remove());
