@@ -17,6 +17,6 @@
   "homepage": "https://bijou.js.org",
   "devDependencies": {
     "clean-jsdoc-theme": "3.0.7",
-    "jsdoc": "~3.6.6",
+    "jsdoc": "~3.6.6"
   }
 }
